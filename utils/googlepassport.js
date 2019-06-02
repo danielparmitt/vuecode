@@ -19,8 +19,8 @@ passport.deserializeUser((userobj, done)=>{
 
 passport.use(new GoogleStrategy({
     callbackURL: '/dashboard',
-    clientID:'22608993543-ksruo4vkd105f8a21mr1uemkr45la3bn.apps.googleusercontent.com',
-    clientSecret:'3gPkx4-B65y0yYZi34yNWqDa'
+    clientID:'',
+    clientSecret:''
 },(accessToken, refreshToken, profile, done )=>{
     console.log('callback Google... ',profile,'token -->',accessToken );
     const jwt = require('../utils/token');
